@@ -1,0 +1,2060 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-20T07:10:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 529454530,
+  "bounds": {
+    "minlat": 30.2698445,
+    "minlon": 104.3984578,
+    "maxlat": 30.3154012,
+    "maxlon": 104.4424855
+  },
+  "nodes": [
+    6669929053,
+    13871338681,
+    6669929054,
+    5143033636,
+    5143033635,
+    7618664192,
+    6669929049,
+    5143033634,
+    5143033633,
+    6669929048,
+    9199536448,
+    6669929047,
+    6669929046,
+    5143033630,
+    6669929045,
+    6669929044,
+    6669929043,
+    5143033629,
+    5143033628,
+    6669929051,
+    6669929042,
+    5143033632,
+    6669929038,
+    6669929052
+  ],
+  "geometry": [
+    { "lat": 30.3154012, "lon": 104.4424855 },
+    { "lat": 30.3027421, "lon": 104.4365731 },
+    { "lat": 30.2941993, "lon": 104.4325836 },
+    { "lat": 30.2760028, "lon": 104.4239856 },
+    { "lat": 30.2738260, "lon": 104.4228624 },
+    { "lat": 30.2732164, "lon": 104.4223895 },
+    { "lat": 30.2727070, "lon": 104.4218875 },
+    { "lat": 30.2720946, "lon": 104.4211826 },
+    { "lat": 30.2715369, "lon": 104.4204479 },
+    { "lat": 30.2710137, "lon": 104.4196498 },
+    { "lat": 30.2706212, "lon": 104.4188414 },
+    { "lat": 30.2702939, "lon": 104.4179823 },
+    { "lat": 30.2700820, "lon": 104.4171690 },
+    { "lat": 30.2699150, "lon": 104.4160482 },
+    { "lat": 30.2698445, "lon": 104.4142856 },
+    { "lat": 30.2698867, "lon": 104.4126730 },
+    { "lat": 30.2700702, "lon": 104.4110865 },
+    { "lat": 30.2704076, "lon": 104.4087086 },
+    { "lat": 30.2706103, "lon": 104.4075611 },
+    { "lat": 30.2708434, "lon": 104.4066054 },
+    { "lat": 30.2712050, "lon": 104.4053527 },
+    { "lat": 30.2724138, "lon": 104.4019423 },
+    { "lat": 30.2726044, "lon": 104.4014957 },
+    { "lat": 30.2740783, "lon": 104.3984578 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "-2",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "tunnel": "yes",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 920683836,
+  "bounds": {
+    "minlat": 30.3534217,
+    "minlon": 104.3407427,
+    "maxlat": 30.3669901,
+    "maxlon": 104.4077224
+  },
+  "nodes": [
+    6084381936,
+    14289236140,
+    9774054223,
+    14289236137,
+    8548390929,
+    8548390928,
+    14289236135,
+    8548390931,
+    8548321614,
+    9774054222,
+    14289236134,
+    8548390925,
+    10933263387,
+    14289236129,
+    8807570731,
+    14289236131,
+    8548321615,
+    10933263386,
+    10933263385,
+    8548390926,
+    10933263384,
+    14289236008,
+    8807570732,
+    8548390927,
+    8548321616,
+    11524993423
+  ],
+  "geometry": [
+    { "lat": 30.3534217, "lon": 104.4077224 },
+    { "lat": 30.3545550, "lon": 104.4058137 },
+    { "lat": 30.3560333, "lon": 104.4031046 },
+    { "lat": 30.3566275, "lon": 104.4019232 },
+    { "lat": 30.3571162, "lon": 104.4008884 },
+    { "lat": 30.3586110, "lon": 104.3976264 },
+    { "lat": 30.3592790, "lon": 104.3960482 },
+    { "lat": 30.3599384, "lon": 104.3944015 },
+    { "lat": 30.3610900, "lon": 104.3912579 },
+    { "lat": 30.3620318, "lon": 104.3884701 },
+    { "lat": 30.3623719, "lon": 104.3873413 },
+    { "lat": 30.3627239, "lon": 104.3861489 },
+    { "lat": 30.3631763, "lon": 104.3844093 },
+    { "lat": 30.3636102, "lon": 104.3826632 },
+    { "lat": 30.3640276, "lon": 104.3808958 },
+    { "lat": 30.3643200, "lon": 104.3795550 },
+    { "lat": 30.3646002, "lon": 104.3781686 },
+    { "lat": 30.3650756, "lon": 104.3753003 },
+    { "lat": 30.3654750, "lon": 104.3725558 },
+    { "lat": 30.3658565, "lon": 104.3691928 },
+    { "lat": 30.3660509, "lon": 104.3665583 },
+    { "lat": 30.3661322, "lon": 104.3650454 },
+    { "lat": 30.3661912, "lon": 104.3634176 },
+    { "lat": 30.3663088, "lon": 104.3604497 },
+    { "lat": 30.3667895, "lon": 104.3465791 },
+    { "lat": 30.3669901, "lon": 104.3407427 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "2",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 956194672,
+  "bounds": {
+    "minlat": 30.2817093,
+    "minlon": 104.3822870,
+    "maxlat": 30.2821750,
+    "maxlon": 104.3829827
+  },
+  "nodes": [
+    11111290998,
+    12254929267,
+    9976019680,
+    8849581445
+  ],
+  "geometry": [
+    { "lat": 30.2821750, "lon": 104.3822870 },
+    { "lat": 30.2820981, "lon": 104.3823961 },
+    { "lat": 30.2820305, "lon": 104.3824920 },
+    { "lat": 30.2817093, "lon": 104.3829827 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "gauge": "1435",
+    "layer": "1",
+    "railway": "subway",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 965436957,
+  "bounds": {
+    "minlat": 30.2685656,
+    "minlon": 104.4751399,
+    "maxlat": 30.2728972,
+    "maxlon": 104.4783551
+  },
+  "nodes": [
+    7707685620,
+    7707685622
+  ],
+  "geometry": [
+    { "lat": 30.2685656, "lon": 104.4783551 },
+    { "lat": 30.2728972, "lon": 104.4751399 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "1",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 965436959,
+  "bounds": {
+    "minlat": 30.2841903,
+    "minlon": 104.4215562,
+    "maxlat": 30.3429876,
+    "maxlon": 104.4667286
+  },
+  "nodes": [
+    7707685623,
+    6084381946,
+    14289236156,
+    6084381944,
+    9967477871,
+    14289236155,
+    8548390932,
+    9967477870
+  ],
+  "geometry": [
+    { "lat": 30.2841903, "lon": 104.4667286 },
+    { "lat": 30.3008480, "lon": 104.4544298 },
+    { "lat": 30.3334899, "lon": 104.4301703 },
+    { "lat": 30.3364321, "lon": 104.4277625 },
+    { "lat": 30.3383322, "lon": 104.4260981 },
+    { "lat": 30.3397486, "lon": 104.4248359 },
+    { "lat": 30.3411370, "lon": 104.4235310 },
+    { "lat": 30.3429876, "lon": 104.4215562 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "-3",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "tunnel": "yes",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 991935165,
+  "bounds": {
+    "minlat": 30.2697622,
+    "minlon": 104.3983856,
+    "maxlat": 30.3153663,
+    "maxlon": 104.4425804
+  },
+  "nodes": [
+    7615987169,
+    9164861788,
+    9164861787,
+    9164861786,
+    9164861785,
+    9164861784,
+    9164861783,
+    13898907822,
+    9164861782,
+    9164861781,
+    9164861780,
+    9164861779,
+    9164861778,
+    9164861777,
+    9199536447,
+    9164861776,
+    9164861775,
+    9164861774,
+    9164861773,
+    9164861772,
+    9164861771,
+    9164861770,
+    9164861769,
+    9164861768
+  ],
+  "geometry": [
+    { "lat": 30.2739745, "lon": 104.3983856 },
+    { "lat": 30.2725269, "lon": 104.4014246 },
+    { "lat": 30.2723352, "lon": 104.4018856 },
+    { "lat": 30.2711225, "lon": 104.4053216 },
+    { "lat": 30.2707575, "lon": 104.4065764 },
+    { "lat": 30.2705327, "lon": 104.4075411 },
+    { "lat": 30.2703336, "lon": 104.4087234 },
+    { "lat": 30.2700936, "lon": 104.4103938 },
+    { "lat": 30.2699945, "lon": 104.4110837 },
+    { "lat": 30.2698101, "lon": 104.4126630 },
+    { "lat": 30.2697622, "lon": 104.4142807 },
+    { "lat": 30.2698357, "lon": 104.4160607 },
+    { "lat": 30.2699978, "lon": 104.4171872 },
+    { "lat": 30.2702065, "lon": 104.4180137 },
+    { "lat": 30.2705282, "lon": 104.4189034 },
+    { "lat": 30.2709274, "lon": 104.4197261 },
+    { "lat": 30.2714556, "lon": 104.4205146 },
+    { "lat": 30.2720333, "lon": 104.4212504 },
+    { "lat": 30.2726530, "lon": 104.4219650 },
+    { "lat": 30.2731671, "lon": 104.4224643 },
+    { "lat": 30.2737922, "lon": 104.4229364 },
+    { "lat": 30.2759586, "lon": 104.4240681 },
+    { "lat": 30.2941604, "lon": 104.4326789 },
+    { "lat": 30.3153663, "lon": 104.4425804 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "-2",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "tunnel": "yes",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1087861274,
+  "bounds": {
+    "minlat": 30.3444002,
+    "minlon": 104.4123816,
+    "maxlat": 30.3504256,
+    "maxlon": 104.4200315
+  },
+  "nodes": [
+    9774054226,
+    14289236147,
+    6085859604,
+    14289236149,
+    9774054225,
+    14289236151,
+    8548390930
+  ],
+  "geometry": [
+    { "lat": 30.3444002, "lon": 104.4200315 },
+    { "lat": 30.3453803, "lon": 104.4189190 },
+    { "lat": 30.3463598, "lon": 104.4177429 },
+    { "lat": 30.3473249, "lon": 104.4165550 },
+    { "lat": 30.3482886, "lon": 104.4153260 },
+    { "lat": 30.3493633, "lon": 104.4138818 },
+    { "lat": 30.3504256, "lon": 104.4123816 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "2",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1087861275,
+  "bounds": {
+    "minlat": 30.3530124,
+    "minlon": 104.4077224,
+    "maxlat": 30.3534217,
+    "maxlon": 104.4084026
+  },
+  "nodes": [
+    9774054224,
+    6084381936
+  ],
+  "geometry": [
+    { "lat": 30.3530124, "lon": 104.4084026 },
+    { "lat": 30.3534217, "lon": 104.4077224 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1088955481,
+  "bounds": {
+    "minlat": 30.2739745,
+    "minlon": 104.3821147,
+    "maxlat": 30.2819098,
+    "maxlon": 104.3983856
+  },
+  "nodes": [
+    7615987169,
+    8912632134,
+    7707685224,
+    8849581438,
+    7615987170,
+    8849585786,
+    8849581446,
+    9976019677
+  ],
+  "geometry": [
+    { "lat": 30.2739745, "lon": 104.3983856 },
+    { "lat": 30.2752361, "lon": 104.3955413 },
+    { "lat": 30.2759304, "lon": 104.3941221 },
+    { "lat": 30.2799584, "lon": 104.3860552 },
+    { "lat": 30.2801737, "lon": 104.3856512 },
+    { "lat": 30.2806126, "lon": 104.3847591 },
+    { "lat": 30.2810845, "lon": 104.3838211 },
+    { "lat": 30.2819098, "lon": 104.3821147 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1088955482,
+  "bounds": {
+    "minlat": 30.2740783,
+    "minlon": 104.3823136,
+    "maxlat": 30.2822157,
+    "maxlon": 104.3984578
+  },
+  "nodes": [
+    6669929052,
+    5143033631,
+    6669929037,
+    6669929036,
+    5143033627,
+    6669929055,
+    6669929035,
+    9976019678
+  ],
+  "geometry": [
+    { "lat": 30.2740783, "lon": 104.3984578 },
+    { "lat": 30.2751102, "lon": 104.3965117 },
+    { "lat": 30.2764398, "lon": 104.3937678 },
+    { "lat": 30.2775909, "lon": 104.3915533 },
+    { "lat": 30.2788126, "lon": 104.3891000 },
+    { "lat": 30.2809067, "lon": 104.3849476 },
+    { "lat": 30.2813809, "lon": 104.3839928 },
+    { "lat": 30.2822157, "lon": 104.3823136 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1088955483,
+  "bounds": {
+    "minlat": 30.2819098,
+    "minlon": 104.3779189,
+    "maxlat": 30.2843505,
+    "maxlon": 104.3821147
+  },
+  "nodes": [
+    9976019677,
+    7615987168,
+    7615987167,
+    13898907823,
+    7615987166
+  ],
+  "geometry": [
+    { "lat": 30.2819098, "lon": 104.3821147 },
+    { "lat": 30.2822645, "lon": 104.3813813 },
+    { "lat": 30.2831263, "lon": 104.3798536 },
+    { "lat": 30.2839370, "lon": 104.3785724 },
+    { "lat": 30.2843505, "lon": 104.3779189 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1088955484,
+  "bounds": {
+    "minlat": 30.2822157,
+    "minlon": 104.3782276,
+    "maxlat": 30.2843773,
+    "maxlon": 104.3823136
+  },
+  "nodes": [
+    9976019678,
+    8849581442,
+    7616000401,
+    7616000402,
+    6669929034
+  ],
+  "geometry": [
+    { "lat": 30.2822157, "lon": 104.3823136 },
+    { "lat": 30.2823675, "lon": 104.3820090 },
+    { "lat": 30.2827834, "lon": 104.3811741 },
+    { "lat": 30.2836440, "lon": 104.3795718 },
+    { "lat": 30.2843773, "lon": 104.3782276 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1176835677,
+  "bounds": {
+    "minlat": 30.3517373,
+    "minlon": 104.4084026,
+    "maxlat": 30.3530124,
+    "maxlon": 104.4104173
+  },
+  "nodes": [
+    10933263388,
+    9774054224
+  ],
+  "geometry": [
+    { "lat": 30.3517373, "lon": 104.4104173 },
+    { "lat": 30.3530124, "lon": 104.4084026 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "1",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1176835678,
+  "bounds": {
+    "minlat": 30.3504256,
+    "minlon": 104.4104173,
+    "maxlat": 30.3517373,
+    "maxlon": 104.4123816
+  },
+  "nodes": [
+    8548390930,
+    10933263388
+  ],
+  "geometry": [
+    { "lat": 30.3504256, "lon": 104.4123816 },
+    { "lat": 30.3517373, "lon": 104.4104173 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1176835679,
+  "bounds": {
+    "minlat": 30.3429876,
+    "minlon": 104.4200315,
+    "maxlat": 30.3444002,
+    "maxlon": 104.4215562
+  },
+  "nodes": [
+    9967477870,
+    14289236153,
+    9774054226
+  ],
+  "geometry": [
+    { "lat": 30.3429876, "lon": 104.4215562 },
+    { "lat": 30.3437058, "lon": 104.4208137 },
+    { "lat": 30.3444002, "lon": 104.4200315 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1197601734,
+  "bounds": {
+    "minlat": 30.2821750,
+    "minlon": 104.3820090,
+    "maxlat": 30.2823675,
+    "maxlon": 104.3822870
+  },
+  "nodes": [
+    8849581442,
+    11111290998
+  ],
+  "geometry": [
+    { "lat": 30.2823675, "lon": 104.3820090 },
+    { "lat": 30.2821750, "lon": 104.3822870 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "gauge": "1435",
+    "railway": "subway",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 1227358715,
+  "bounds": {
+    "minlat": 30.3153663,
+    "minlon": 104.4425804,
+    "maxlat": 30.3369355,
+    "maxlon": 104.4527560
+  },
+  "nodes": [
+    9164861768,
+    9164861767,
+    9164861766,
+    9164861765,
+    9164861764
+  ],
+  "geometry": [
+    { "lat": 30.3153663, "lon": 104.4425804 },
+    { "lat": 30.3176618, "lon": 104.4436768 },
+    { "lat": 30.3221118, "lon": 104.4457528 },
+    { "lat": 30.3241956, "lon": 104.4467425 },
+    { "lat": 30.3369355, "lon": 104.4527560 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "-2",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "tunnel": "yes",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1227358716,
+  "bounds": {
+    "minlat": 30.3154012,
+    "minlon": 104.4424855,
+    "maxlat": 30.3369666,
+    "maxlon": 104.4526642
+  },
+  "nodes": [
+    8348764612,
+    8867473133,
+    7796671257,
+    7796671288,
+    6669929053
+  ],
+  "geometry": [
+    { "lat": 30.3369666, "lon": 104.4526642 },
+    { "lat": 30.3242208, "lon": 104.4466442 },
+    { "lat": 30.3221724, "lon": 104.4456816 },
+    { "lat": 30.3177159, "lon": 104.4435970 },
+    { "lat": 30.3154012, "lon": 104.4424855 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "-2",
+    "maxspeed": "160",
+    "name": "成都地铁18号线",
+    "name:en": "Chengdu Metro Line 18",
+    "name:zh": "成都地铁18号线",
+    "name:zh-Hans": "成都地铁18号线",
+    "name:zh-Hant": "成都地鐵18號線",
+    "railway": "subway",
+    "ref": "18",
+    "tunnel": "yes",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343897,
+  "bounds": {
+    "minlat": 30.2807529,
+    "minlon": 104.3822172,
+    "maxlat": 30.2820460,
+    "maxlon": 104.3848414
+  },
+  "nodes": [
+    14247461815,
+    12254929263,
+    12254929265,
+    12254929247,
+    12254929249
+  ],
+  "geometry": [
+    { "lat": 30.2820460, "lon": 104.3822172 },
+    { "lat": 30.2813729, "lon": 104.3835922 },
+    { "lat": 30.2812816, "lon": 104.3837795 },
+    { "lat": 30.2811859, "lon": 104.3839759 },
+    { "lat": 30.2807529, "lon": 104.3848414 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343898,
+  "bounds": {
+    "minlat": 30.2796802,
+    "minlon": 104.3860552,
+    "maxlat": 30.2799584,
+    "maxlon": 104.3869342
+  },
+  "nodes": [
+    8849581438,
+    8849581440
+  ],
+  "geometry": [
+    { "lat": 30.2799584, "lon": 104.3860552 },
+    { "lat": 30.2796802, "lon": 104.3869342 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "gauge": "1435",
+    "layer": "1",
+    "railway": "subway",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343899,
+  "bounds": {
+    "minlat": 30.2807738,
+    "minlon": 104.3822416,
+    "maxlat": 30.2820793,
+    "maxlon": 104.3848546
+  },
+  "nodes": [
+    9976019679,
+    8849581445,
+    12254929264,
+    12254929262,
+    12254929246,
+    7880204006
+  ],
+  "geometry": [
+    { "lat": 30.2820793, "lon": 104.3822416 },
+    { "lat": 30.2817093, "lon": 104.3829827 },
+    { "lat": 30.2813968, "lon": 104.3836089 },
+    { "lat": 30.2813047, "lon": 104.3837933 },
+    { "lat": 30.2812019, "lon": 104.3839992 },
+    { "lat": 30.2807738, "lon": 104.3848546 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343900,
+  "bounds": {
+    "minlat": 30.2813047,
+    "minlon": 104.3835922,
+    "maxlat": 30.2813729,
+    "maxlon": 104.3837933
+  },
+  "nodes": [
+    12254929262,
+    12254929266,
+    12254929263
+  ],
+  "geometry": [
+    { "lat": 30.2813047, "lon": 104.3837933 },
+    { "lat": 30.2813409, "lon": 104.3836889 },
+    { "lat": 30.2813729, "lon": 104.3835922 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "railway": "subway",
+    "service": "crossover",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343901,
+  "bounds": {
+    "minlat": 30.2812816,
+    "minlon": 104.3836089,
+    "maxlat": 30.2813968,
+    "maxlon": 104.3837795
+  },
+  "nodes": [
+    12254929264,
+    12254929266,
+    12254929265
+  ],
+  "geometry": [
+    { "lat": 30.2813968, "lon": 104.3836089 },
+    { "lat": 30.2813409, "lon": 104.3836889 },
+    { "lat": 30.2812816, "lon": 104.3837795 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "railway": "subway",
+    "service": "crossover",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343927,
+  "bounds": {
+    "minlat": 30.2792820,
+    "minlon": 104.3848414,
+    "maxlat": 30.2807529,
+    "maxlon": 104.3877029
+  },
+  "nodes": [
+    12254929249,
+    12254929248,
+    8849581440,
+    12254929259
+  ],
+  "geometry": [
+    { "lat": 30.2807529, "lon": 104.3848414 },
+    { "lat": 30.2803085, "lon": 104.3857299 },
+    { "lat": 30.2796802, "lon": 104.3869342 },
+    { "lat": 30.2792820, "lon": 104.3877029 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1324343928,
+  "bounds": {
+    "minlat": 30.2793220,
+    "minlon": 104.3848546,
+    "maxlat": 30.2807738,
+    "maxlon": 104.3877244
+  },
+  "nodes": [
+    12254929260,
+    12254929253,
+    12254929245,
+    7880204006
+  ],
+  "geometry": [
+    { "lat": 30.2793220, "lon": 104.3877244 },
+    { "lat": 30.2797097, "lon": 104.3869501 },
+    { "lat": 30.2803298, "lon": 104.3857450 },
+    { "lat": 30.2807738, "lon": 104.3848546 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1530966022,
+  "bounds": {
+    "minlat": 30.2761049,
+    "minlon": 104.3877029,
+    "maxlat": 30.2792820,
+    "maxlon": 104.3940091
+  },
+  "nodes": [
+    12254929259,
+    12254929364
+  ],
+  "geometry": [
+    { "lat": 30.2792820, "lon": 104.3877029 },
+    { "lat": 30.2761049, "lon": 104.3940091 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1530966023,
+  "bounds": {
+    "minlat": 30.2761591,
+    "minlon": 104.3877244,
+    "maxlat": 30.2793220,
+    "maxlon": 104.3940398
+  },
+  "nodes": [
+    8912632135,
+    7817200449,
+    12254929260
+  ],
+  "geometry": [
+    { "lat": 30.2761591, "lon": 104.3940398 },
+    { "lat": 30.2777751, "lon": 104.3908137 },
+    { "lat": 30.2793220, "lon": 104.3877244 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1530966024,
+  "bounds": {
+    "minlat": 30.2742061,
+    "minlon": 104.3940398,
+    "maxlat": 30.2761591,
+    "maxlon": 104.3973246
+  },
+  "nodes": [
+    13953405362,
+    8912632137,
+    8912632136,
+    12254929254,
+    8912632139,
+    7817200450,
+    8912632135
+  ],
+  "geometry": [
+    { "lat": 30.2742061, "lon": 104.3973246 },
+    { "lat": 30.2745137, "lon": 104.3968895 },
+    { "lat": 30.2750824, "lon": 104.3959897 },
+    { "lat": 30.2753642, "lon": 104.3955422 },
+    { "lat": 30.2756459, "lon": 104.3950397 },
+    { "lat": 30.2758507, "lon": 104.3946637 },
+    { "lat": 30.2761591, "lon": 104.3940398 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "2",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1530966025,
+  "bounds": {
+    "minlat": 30.2741674,
+    "minlon": 104.3940091,
+    "maxlat": 30.2761049,
+    "maxlon": 104.3972814
+  },
+  "nodes": [
+    12254929364,
+    12254929252,
+    12254929255,
+    12254929258,
+    12254929256,
+    12254929251,
+    12254929257
+  ],
+  "geometry": [
+    { "lat": 30.2761049, "lon": 104.3940091 },
+    { "lat": 30.2757917, "lon": 104.3946195 },
+    { "lat": 30.2755953, "lon": 104.3949929 },
+    { "lat": 30.2752974, "lon": 104.3955432 },
+    { "lat": 30.2750084, "lon": 104.3960034 },
+    { "lat": 30.2746775, "lon": 104.3965442 },
+    { "lat": 30.2741674, "lon": 104.3972814 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "2",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1564831228,
+  "bounds": {
+    "minlat": 30.2820460,
+    "minlon": 104.3809452,
+    "maxlat": 30.2826686,
+    "maxlon": 104.3822172
+  },
+  "nodes": [
+    12254929261,
+    14247461815
+  ],
+  "geometry": [
+    { "lat": 30.2826686, "lon": 104.3809452 },
+    { "lat": 30.2820460, "lon": 104.3822172 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1564831229,
+  "bounds": {
+    "minlat": 30.2820793,
+    "minlon": 104.3809807,
+    "maxlat": 30.2827162,
+    "maxlon": 104.3822416
+  },
+  "nodes": [
+    7817200448,
+    9976019679
+  ],
+  "geometry": [
+    { "lat": 30.2827162, "lon": 104.3809807 },
+    { "lat": 30.2820793, "lon": 104.3822416 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1564831231,
+  "bounds": {
+    "minlat": 30.2691595,
+    "minlon": 104.3972814,
+    "maxlat": 30.2741674,
+    "maxlon": 104.4044980
+  },
+  "nodes": [
+    12254929257,
+    12254929250,
+    12254929268,
+    13953405347,
+    12254929269,
+    14247461824
+  ],
+  "geometry": [
+    { "lat": 30.2741674, "lon": 104.3972814 },
+    { "lat": 30.2704244, "lon": 104.4024915 },
+    { "lat": 30.2698800, "lon": 104.4032978 },
+    { "lat": 30.2695565, "lon": 104.4038078 },
+    { "lat": 30.2692778, "lon": 104.4042753 },
+    { "lat": 30.2691595, "lon": 104.4044980 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1564831232,
+  "bounds": {
+    "minlat": 30.2692499,
+    "minlon": 104.3973246,
+    "maxlat": 30.2742061,
+    "maxlon": 104.4044215
+  },
+  "nodes": [
+    14247461825,
+    7817200452,
+    8912632142,
+    7817200451,
+    8912632138,
+    13953405362
+  ],
+  "geometry": [
+    { "lat": 30.2692499, "lon": 104.4044215 },
+    { "lat": 30.2696164, "lon": 104.4037996 },
+    { "lat": 30.2701122, "lon": 104.4030343 },
+    { "lat": 30.2719945, "lon": 104.4003670 },
+    { "lat": 30.2733738, "lon": 104.3985021 },
+    { "lat": 30.2742061, "lon": 104.3973246 }
+  ],
+  "tags": {
+    "alt_name": "轨道交通资阳线",
+    "bridge": "viaduct",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "160",
+    "name": "成都市域铁路资阳线",
+    "name:en": "Chengdu Intercity Railway Ziyang Line",
+    "name:zh": "成都市域铁路资阳线",
+    "name:zh-Hans": "成都市域铁路资阳线",
+    "name:zh-Hant": "成都會域鐵路資陽線",
+    "operator": "成都轨道交通集团有限公司",
+    "railway": "subway",
+    "railway:preferred_direction": "forward",
+    "ref": "S3",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272287,
+  "bounds": {
+    "minlat": 30.3504604,
+    "minlon": 104.4104490,
+    "maxlat": 30.3517728,
+    "maxlon": 104.4124143
+  },
+  "nodes": [
+    14283929030,
+    14283928994
+  ],
+  "geometry": [
+    { "lat": 30.3504604, "lon": 104.4124143 },
+    { "lat": 30.3517728, "lon": 104.4104490 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272289,
+  "bounds": {
+    "minlat": 30.3430180,
+    "minlon": 104.4200689,
+    "maxlat": 30.3444313,
+    "maxlon": 104.4215944
+  },
+  "nodes": [
+    14283928991,
+    14289236152,
+    14283929031
+  ],
+  "geometry": [
+    { "lat": 30.3430180, "lon": 104.4215944 },
+    { "lat": 30.3437383, "lon": 104.4208497 },
+    { "lat": 30.3444313, "lon": 104.4200689 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272292,
+  "bounds": {
+    "minlat": 30.3517728,
+    "minlon": 104.4084331,
+    "maxlat": 30.3530487,
+    "maxlon": 104.4104490
+  },
+  "nodes": [
+    14283928994,
+    14283929033
+  ],
+  "geometry": [
+    { "lat": 30.3517728, "lon": 104.4104490 },
+    { "lat": 30.3530487, "lon": 104.4084331 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "1",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272315,
+  "bounds": {
+    "minlat": 30.3534588,
+    "minlon": 104.3407497,
+    "maxlat": 30.3670364,
+    "maxlon": 104.4077515
+  },
+  "nodes": [
+    14283929032,
+    14289236139,
+    14283928983,
+    14289236138,
+    14283928982,
+    14283928981,
+    14289236136,
+    14283928980,
+    14283928979,
+    14283928978,
+    14289236133,
+    14283928977,
+    14283928976,
+    14289236130,
+    14283928975,
+    14289236132,
+    14283928974,
+    14283928973,
+    14283928972,
+    14283928971,
+    14283928970,
+    14289236009,
+    14283928969,
+    14283928968,
+    14283928967,
+    11524993424
+  ],
+  "geometry": [
+    { "lat": 30.3534588, "lon": 104.4077515 },
+    { "lat": 30.3545931, "lon": 104.4058412 },
+    { "lat": 30.3560716, "lon": 104.4031317 },
+    { "lat": 30.3566673, "lon": 104.4019472 },
+    { "lat": 30.3571555, "lon": 104.4009134 },
+    { "lat": 30.3586511, "lon": 104.3976497 },
+    { "lat": 30.3593202, "lon": 104.3960687 },
+    { "lat": 30.3599795, "lon": 104.3944222 },
+    { "lat": 30.3611316, "lon": 104.3912772 },
+    { "lat": 30.3620738, "lon": 104.3884882 },
+    { "lat": 30.3624129, "lon": 104.3873625 },
+    { "lat": 30.3627666, "lon": 104.3861649 },
+    { "lat": 30.3632195, "lon": 104.3844231 },
+    { "lat": 30.3636521, "lon": 104.3826822 },
+    { "lat": 30.3640711, "lon": 104.3809082 },
+    { "lat": 30.3643629, "lon": 104.3795701 },
+    { "lat": 30.3646439, "lon": 104.3781801 },
+    { "lat": 30.3651196, "lon": 104.3753102 },
+    { "lat": 30.3655193, "lon": 104.3725639 },
+    { "lat": 30.3659010, "lon": 104.3691988 },
+    { "lat": 30.3660956, "lon": 104.3665624 },
+    { "lat": 30.3661766, "lon": 104.3650558 },
+    { "lat": 30.3662359, "lon": 104.3634205 },
+    { "lat": 30.3663536, "lon": 104.3604520 },
+    { "lat": 30.3668343, "lon": 104.3465813 },
+    { "lat": 30.3670364, "lon": 104.3407497 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "2",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272319,
+  "bounds": {
+    "minlat": 30.2685900,
+    "minlon": 104.4751835,
+    "maxlat": 30.2729215,
+    "maxlon": 104.4783987
+  },
+  "nodes": [
+    14283929019,
+    14283929022
+  ],
+  "geometry": [
+    { "lat": 30.2685900, "lon": 104.4783987 },
+    { "lat": 30.2729215, "lon": 104.4751835 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "1",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272321,
+  "bounds": {
+    "minlat": 30.2842145,
+    "minlon": 104.4215944,
+    "maxlat": 30.3430180,
+    "maxlon": 104.4667724
+  },
+  "nodes": [
+    14283928986,
+    14283929021,
+    14289236157,
+    14283928957,
+    14283928956,
+    14289236154,
+    14283928955,
+    14283928991
+  ],
+  "geometry": [
+    { "lat": 30.2842145, "lon": 104.4667724 },
+    { "lat": 30.3008721, "lon": 104.4544736 },
+    { "lat": 30.3335169, "lon": 104.4302118 },
+    { "lat": 30.3364586, "lon": 104.4278045 },
+    { "lat": 30.3383601, "lon": 104.4261388 },
+    { "lat": 30.3397785, "lon": 104.4248747 },
+    { "lat": 30.3411659, "lon": 104.4235707 },
+    { "lat": 30.3430180, "lon": 104.4215944 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "-3",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "tunnel": "yes",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272327,
+  "bounds": {
+    "minlat": 30.3444313,
+    "minlon": 104.4124143,
+    "maxlat": 30.3504604,
+    "maxlon": 104.4200689
+  },
+  "nodes": [
+    14283929031,
+    14289236146,
+    14283928990,
+    14289236148,
+    14283928989,
+    14289236150,
+    14283929030
+  ],
+  "geometry": [
+    { "lat": 30.3444313, "lon": 104.4200689 },
+    { "lat": 30.3454074, "lon": 104.4189611 },
+    { "lat": 30.3463921, "lon": 104.4177790 },
+    { "lat": 30.3473557, "lon": 104.4165930 },
+    { "lat": 30.3483224, "lon": 104.4153601 },
+    { "lat": 30.3493903, "lon": 104.4139252 },
+    { "lat": 30.3504604, "lon": 104.4124143 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "2",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568272328,
+  "bounds": {
+    "minlat": 30.3530487,
+    "minlon": 104.4077515,
+    "maxlat": 30.3534588,
+    "maxlon": 104.4084331
+  },
+  "nodes": [
+    14283929033,
+    14283929032
+  ],
+  "geometry": [
+    { "lat": 30.3530487, "lon": 104.4084331 },
+    { "lat": 30.3534588, "lon": 104.4077515 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568723569,
+  "bounds": {
+    "minlat": 30.2773875,
+    "minlon": 104.4667286,
+    "maxlat": 30.2841903,
+    "maxlon": 104.4717979
+  },
+  "nodes": [
+    14289236159,
+    7707685623
+  ],
+  "geometry": [
+    { "lat": 30.2773875, "lon": 104.4717979 },
+    { "lat": 30.2841903, "lon": 104.4667286 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568723570,
+  "bounds": {
+    "minlat": 30.2774081,
+    "minlon": 104.4667724,
+    "maxlat": 30.2842145,
+    "maxlon": 104.4718444
+  },
+  "nodes": [
+    14289236158,
+    14283928986
+  ],
+  "geometry": [
+    { "lat": 30.2774081, "lon": 104.4718444 },
+    { "lat": 30.2842145, "lon": 104.4667724 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568723571,
+  "bounds": {
+    "minlat": 30.2743606,
+    "minlon": 104.4718444,
+    "maxlat": 30.2774081,
+    "maxlon": 104.4741239
+  },
+  "nodes": [
+    14289236160,
+    14289236158
+  ],
+  "geometry": [
+    { "lat": 30.2743606, "lon": 104.4741239 },
+    { "lat": 30.2774081, "lon": 104.4718444 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "1",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568723572,
+  "bounds": {
+    "minlat": 30.2743374,
+    "minlon": 104.4717979,
+    "maxlat": 30.2773875,
+    "maxlon": 104.4740795
+  },
+  "nodes": [
+    14289236161,
+    14289236159
+  ],
+  "geometry": [
+    { "lat": 30.2743374, "lon": 104.4740795 },
+    { "lat": 30.2773875, "lon": 104.4717979 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "layer": "1",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568723573,
+  "bounds": {
+    "minlat": 30.2729215,
+    "minlon": 104.4741239,
+    "maxlat": 30.2743606,
+    "maxlon": 104.4751835
+  },
+  "nodes": [
+    14283929022,
+    14289236160
+  ],
+  "geometry": [
+    { "lat": 30.2729215, "lon": 104.4751835 },
+    { "lat": 30.2743606, "lon": 104.4741239 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+},
+{
+  "type": "way",
+  "id": 1568723574,
+  "bounds": {
+    "minlat": 30.2728972,
+    "minlon": 104.4740795,
+    "maxlat": 30.2743374,
+    "maxlon": 104.4751399
+  },
+  "nodes": [
+    7707685622,
+    14289236161
+  ],
+  "geometry": [
+    { "lat": 30.2728972, "lon": 104.4751399 },
+    { "lat": 30.2743374, "lon": 104.4740795 }
+  ],
+  "tags": {
+    "alt_name": "成自宜高速铁路",
+    "alt_name:zh": "成自宜高速铁路",
+    "alt_name:zh-Hans": "成自宜高速铁路",
+    "alt_name:zh-Hant": "成自宜高速鐵路",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "highspeed": "yes",
+    "maxspeed": "350",
+    "name": "成宜高速线",
+    "name:zh": "成宜高速线",
+    "name:zh-Hans": "成宜高速线",
+    "name:zh-Hant": "成宜高速線",
+    "operator": "中国铁路成都局集团",
+    "railway": "rail",
+    "start_date": "2023-12-26",
+    "usage": "main",
+    "voltage": "25000"
+  }
+}
+
+  ]
+}

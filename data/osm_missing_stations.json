@@ -1,0 +1,1410 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-19T05:26:47Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1933562813,
+  "lat": 30.6618826,
+  "lon": 104.0541094,
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "network": "成都地铁",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6596725561,
+  "lat": 30.4341472,
+  "lon": 104.0353406,
+  "tags": {
+    "name": "芦角",
+    "name:en": "Lujiao",
+    "name:zh": "芦角",
+    "network": "CDRT",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref": "06/53",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7834217165,
+  "lat": 30.6520650,
+  "lon": 104.0538646,
+  "tags": {
+    "name": "文翁石室",
+    "name:en": "Wenweng Shishi",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8067592170,
+  "lat": 30.6619125,
+  "lon": 104.0541497,
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "network": "成都地铁",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8067592171,
+  "lat": 30.6619424,
+  "lon": 104.0541939,
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "network": "成都地铁",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8242501528,
+  "lat": 30.4340688,
+  "lon": 104.0352761,
+  "tags": {
+    "name": "芦角",
+    "name:en": "Lujiao",
+    "name:zh": "芦角",
+    "network": "CDRT",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref": "06/53",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8242765687,
+  "lat": 30.4615554,
+  "lon": 104.0998860,
+  "tags": {
+    "name": "青岛路",
+    "name:en": "Qingdao Road",
+    "name:zh": "青岛路",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref": "06/46",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8242765690,
+  "lat": 30.4615586,
+  "lon": 104.0997956,
+  "tags": {
+    "name": "青岛路",
+    "name:en": "Qingdao Road",
+    "name:zh": "青岛路",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref": "06/46",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9004640352,
+  "lat": 30.6605580,
+  "lon": 104.0558993,
+  "tags": {
+    "bench": "no",
+    "bin": "no",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "人民公园",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "public_transport": "platform",
+    "shelter": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9153430046,
+  "lat": 30.4615609,
+  "lon": 104.0998407,
+  "tags": {
+    "name": "青岛路",
+    "name:en": "Qingdao Road",
+    "name:zh": "青岛路",
+    "network": "CDRT",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "06/46",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9153430047,
+  "lat": 30.4340915,
+  "lon": 104.0353001,
+  "tags": {
+    "name": "芦角",
+    "name:en": "Lujiao",
+    "name:zh": "芦角",
+    "network": "CDRT",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "06/53",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q125826499",
+    "wikipedia": "zh:芦角站"
+  }
+},
+{
+  "type": "node",
+  "id": 10081268819,
+  "lat": 30.6614911,
+  "lon": 104.0552680,
+  "tags": {
+    "bench": "no",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "no",
+    "name": "人民公园",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "public_transport": "platform",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 10081296651,
+  "lat": 30.5841708,
+  "lon": 104.0319232,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "新园大道",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 12430686957,
+  "lat": 30.7432291,
+  "lon": 104.0903767,
+  "tags": {
+    "construction": "station",
+    "name": "白仁店",
+    "name:en": "Bairendian",
+    "name:zh": "白仁店",
+    "public_transport": "station",
+    "railway": "construction",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12430954772,
+  "lat": 30.7431670,
+  "lon": 104.0904138,
+  "tags": {
+    "name": "白仁店",
+    "name:en": "Bairendian",
+    "name:zh": "白仁店",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12430954773,
+  "lat": 30.7432838,
+  "lon": 104.0903293,
+  "tags": {
+    "name": "白仁店",
+    "name:en": "Bairendian",
+    "name:zh": "白仁店",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12437044508,
+  "lat": 30.6605110,
+  "lon": 104.0572420,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "人民公园",
+    "public_transport": "platform",
+    "shelter": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12883578450,
+  "lat": 30.6610569,
+  "lon": 104.0531263,
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "network": "成都地铁",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12883578451,
+  "lat": 30.6610425,
+  "lon": 104.0531458,
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "network": "成都地铁",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12883578452,
+  "lat": 30.6610621,
+  "lon": 104.0530935,
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "network": "成都地铁",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13033806868,
+  "lat": 30.6611485,
+  "lon": 104.0533679,
+  "tags": {
+    "bench": "no",
+    "bin": "no",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "lit": "no",
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "public_transport": "platform",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 13380485910,
+  "lat": 30.5912769,
+  "lon": 104.0731875,
+  "tags": {
+    "name": "府城桥",
+    "name:en": "Fucheng Bridge",
+    "name:zh": "府城桥",
+    "name:zh-Hans": "府城桥",
+    "name:zh-Hant": "府城橋",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2025-12-16",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13380485918,
+  "lat": 30.5910068,
+  "lon": 104.0672093,
+  "tags": {
+    "name": "金融城北",
+    "name:en": "Financial City North",
+    "name:zh": "金融城北",
+    "name:zh-Hans": "金融城北",
+    "name:zh-Hant": "金融城北",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3013",
+    "start_date": "2025-12-16",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13380485921,
+  "lat": 30.5910484,
+  "lon": 104.0579647,
+  "tags": {
+    "name": "益州大道",
+    "name:en": "Yizhou Avenue",
+    "name:zh": "益州大道",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3014",
+    "start_date": "2025-12-16",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13380485923,
+  "lat": 30.5904794,
+  "lon": 104.0372783,
+  "tags": {
+    "name": "新园大道",
+    "name:en": "Xinyuan Avenue",
+    "name:zh": "新园大道",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3016",
+    "start_date": "2025-12-16",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13380485924,
+  "lat": 30.5864550,
+  "lon": 104.0306541,
+  "tags": {
+    "name": "石羊东",
+    "name:en": "Shiyangdong",
+    "name:zh": "石羊东",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3017",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q135920995",
+    "wikipedia": "zh:石羊东站"
+  }
+},
+{
+  "type": "node",
+  "id": 13380485925,
+  "lat": 30.5752522,
+  "lon": 104.0146206,
+  "tags": {
+    "name": "大同",
+    "name:en": "Datong",
+    "name:zh": "大同",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3018",
+    "start_date": "2025-12-16",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13386314405,
+  "lat": 30.6514612,
+  "lon": 104.0547819,
+  "tags": {
+    "name": "文翁石室",
+    "name:en": "Wenweng Shishi",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q111225505"
+  }
+},
+{
+  "type": "node",
+  "id": 13392617757,
+  "lat": 30.6521173,
+  "lon": 104.0539535,
+  "tags": {
+    "name": "文翁石室",
+    "name:en": "Wenweng Shishi",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13955286959,
+  "lat": 30.6611757,
+  "lon": 104.0532750,
+  "tags": {
+    "bus": "yes",
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 13955286960,
+  "lat": 30.6614500,
+  "lon": 104.0552141,
+  "tags": {
+    "bus": "yes",
+    "name": "人民公园",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 13955286961,
+  "lat": 30.6606190,
+  "lon": 104.0559669,
+  "tags": {
+    "bus": "yes",
+    "name": "人民公园",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "way",
+  "id": 103295076,
+  "center": {
+    "lat": 30.6594137,
+    "lon": 104.0554652
+  },
+  "tags": {
+    "alt_name": "少城公园",
+    "description": "曾用名少城公园",
+    "leisure": "park",
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "name:zh-Hans": "人民公园",
+    "name:zh-Hant": "人民公園",
+    "wikidata": "Q16927648",
+    "wikipedia": "zh:人民公园 (成都)"
+  }
+},
+{
+  "type": "way",
+  "id": 224317276,
+  "center": {
+    "lat": 30.5902288,
+    "lon": 104.0361104
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "新园大道",
+    "name:en": "Xinyuan Avenue",
+    "name:zh": "新园大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 298650896,
+  "center": {
+    "lat": 30.5678111,
+    "lon": 104.0558846
+  },
+  "tags": {
+    "cycleway:right": "track",
+    "highway": "primary",
+    "lanes": "3",
+    "name": "益州大道",
+    "name:en": "Yizhou Avenue",
+    "name:zh": "益州大道",
+    "name:zh-Hans": "益州大道",
+    "name:zh-Hant": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 302668217,
+  "center": {
+    "lat": 30.4542664,
+    "lon": 104.0275528
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "青岛路"
+  }
+},
+{
+  "type": "way",
+  "id": 360092039,
+  "center": {
+    "lat": 30.4000816,
+    "lon": 104.5442733
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "人民公园"
+  }
+},
+{
+  "type": "way",
+  "id": 476344192,
+  "center": {
+    "lat": 30.5639967,
+    "lon": 104.0558831
+  },
+  "tags": {
+    "cycleway:right": "track",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "益州大道",
+    "name:en": "Yizhou Avenue",
+    "name:zh": "益州大道",
+    "name:zh-Hans": "益州大道",
+    "name:zh-Hant": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 539235866,
+  "center": {
+    "lat": 30.5949464,
+    "lon": 104.0382758
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "新园大道",
+    "name:en": "Xinyuan Avenue",
+    "name:zh": "新园大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 815745018,
+  "center": {
+    "lat": 30.4551222,
+    "lon": 104.0411835
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "青岛路",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 815745019,
+  "center": {
+    "lat": 30.4565366,
+    "lon": 104.0488008
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "青岛路"
+  }
+},
+{
+  "type": "way",
+  "id": 816305409,
+  "center": {
+    "lat": 30.4562996,
+    "lon": 104.0540663
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468345,
+  "center": {
+    "lat": 30.4561701,
+    "lon": 104.0608046
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "3",
+    "layer": "2",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468346,
+  "center": {
+    "lat": 30.4562145,
+    "lon": 104.0540605
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468347,
+  "center": {
+    "lat": 30.4562576,
+    "lon": 104.0607540
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "3",
+    "layer": "2",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468372,
+  "center": {
+    "lat": 30.4563535,
+    "lon": 104.0673022
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468373,
+  "center": {
+    "lat": 30.4563903,
+    "lon": 104.0659555
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468374,
+  "center": {
+    "lat": 30.4564880,
+    "lon": 104.0659607
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468375,
+  "center": {
+    "lat": 30.4564587,
+    "lon": 104.0673136
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468376,
+  "center": {
+    "lat": 30.4565188,
+    "lon": 104.0643504
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "3",
+    "layer": "1",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468377,
+  "center": {
+    "lat": 30.4567241,
+    "lon": 104.0695489
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468379,
+  "center": {
+    "lat": 30.4570326,
+    "lon": 104.0720664
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468380,
+  "center": {
+    "lat": 30.4575458,
+    "lon": 104.0772846
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468383,
+  "center": {
+    "lat": 30.4574877,
+    "lon": 104.0772846
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468384,
+  "center": {
+    "lat": 30.4569179,
+    "lon": 104.0720716
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468385,
+  "center": {
+    "lat": 30.4566143,
+    "lon": 104.0695457
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "name:zh": "青岛路",
+    "name:zh-Hans": "青岛路",
+    "name:zh-Hant": "青島路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468386,
+  "center": {
+    "lat": 30.4564280,
+    "lon": 104.0643472
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "3",
+    "layer": "1",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 825468387,
+  "center": {
+    "lat": 30.4563751,
+    "lon": 104.0626666
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "3",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 905252251,
+  "center": {
+    "lat": 30.6029693,
+    "lon": 104.0579520
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 905252252,
+  "center": {
+    "lat": 30.6028808,
+    "lon": 104.0578541
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 920003678,
+  "center": {
+    "lat": 30.5947761,
+    "lon": 104.0577247
+  },
+  "tags": {
+    "cycleway:right": "track",
+    "highway": "primary",
+    "lanes": "3",
+    "name": "益州大道",
+    "name:en": "Yizhou Avenue",
+    "name:zh": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 920003679,
+  "center": {
+    "lat": 30.5370218,
+    "lon": 104.0542440
+  },
+  "tags": {
+    "cycleway:right": "track",
+    "highway": "primary",
+    "lanes": "3",
+    "name": "益州大道",
+    "name:en": "Yizhou Avenue",
+    "name:zh": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 920022661,
+  "center": {
+    "lat": 30.5848454,
+    "lon": 104.0323705
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "新园大道",
+    "name:en": "Xinyuan Avenue",
+    "name:zh": "新园大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 920022662,
+  "center": {
+    "lat": 30.5895992,
+    "lon": 104.0344309
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "新园大道",
+    "name:en": "Xinyuan Avenue",
+    "name:zh": "新园大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 951715578,
+  "center": {
+    "lat": 30.4560983,
+    "lon": 104.0587297
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 951715581,
+  "center": {
+    "lat": 30.4564587,
+    "lon": 104.0626520
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "3",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 965580879,
+  "center": {
+    "lat": 30.4604400,
+    "lon": 104.0983258
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 965580880,
+  "center": {
+    "lat": 30.4604869,
+    "lon": 104.0983421
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 987247752,
+  "center": {
+    "lat": 30.4559977,
+    "lon": 104.0587590
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1303292788,
+  "center": {
+    "lat": 30.2576552,
+    "lon": 104.0254932
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1303292789,
+  "center": {
+    "lat": 30.2313846,
+    "lon": 104.0090443
+  },
+  "tags": {
+    "highway": "primary",
+    "layer": "-1",
+    "name": "益州大道",
+    "oneway": "yes",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1303292790,
+  "center": {
+    "lat": 30.2072519,
+    "lon": 104.0085948
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1303292791,
+  "center": {
+    "lat": 30.2401873,
+    "lon": 104.0142067
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1303292792,
+  "center": {
+    "lat": 30.2491086,
+    "lon": 104.0195984
+  },
+  "tags": {
+    "highway": "primary",
+    "layer": "-1",
+    "name": "益州大道",
+    "oneway": "yes",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1303292793,
+  "center": {
+    "lat": 30.2575487,
+    "lon": 104.0256431
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1333225473,
+  "center": {
+    "lat": 30.2401407,
+    "lon": 104.0143508
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1333225474,
+  "center": {
+    "lat": 30.2490457,
+    "lon": 104.0197486
+  },
+  "tags": {
+    "highway": "primary",
+    "layer": "-1",
+    "name": "益州大道",
+    "oneway": "yes",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1333225475,
+  "center": {
+    "lat": 30.2313586,
+    "lon": 104.0091951
+  },
+  "tags": {
+    "highway": "primary",
+    "layer": "-1",
+    "name": "益州大道",
+    "oneway": "yes",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1425030660,
+  "center": {
+    "lat": 30.2643763,
+    "lon": 104.0301388
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1425030661,
+  "center": {
+    "lat": 30.2518928,
+    "lon": 104.0212341
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1425030662,
+  "center": {
+    "lat": 30.2518234,
+    "lon": 104.0213934
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1425030663,
+  "center": {
+    "lat": 30.2642958,
+    "lon": 104.0302119
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1425030670,
+  "center": {
+    "lat": 30.2072511,
+    "lon": 104.0084246
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "益州大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1466897242,
+  "center": {
+    "lat": 30.4561595,
+    "lon": 104.0450572
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1466897243,
+  "center": {
+    "lat": 30.4561595,
+    "lon": 104.0450572
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "青岛路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 11815305,
+  "center": {
+    "lat": 30.6617035,
+    "lon": 104.0544787
+  },
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "public_transport": "stop_area",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 12039104,
+  "center": {
+    "lat": 30.4612387,
+    "lon": 104.0995630
+  },
+  "tags": {
+    "name": "青岛路",
+    "public_transport": "stop_area",
+    "ref": "06/46",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 12039110,
+  "center": {
+    "lat": 30.4342970,
+    "lon": 104.0352454
+  },
+  "tags": {
+    "name": "芦角",
+    "public_transport": "stop_area",
+    "ref": "06/53",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 18436270,
+  "center": {
+    "lat": 30.7432254,
+    "lon": 104.0903715
+  },
+  "tags": {
+    "name": "白仁店",
+    "name:zh": "白仁店",
+    "public_transport": "stop_area",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 19207750,
+  "center": {
+    "lat": 30.6610523,
+    "lon": 104.0531196
+  },
+  "tags": {
+    "name": "人民公园",
+    "name:en": "People's Park",
+    "name:zh": "人民公园",
+    "public_transport": "stop_area",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 19975016,
+  "center": {
+    "lat": 30.6517893,
+    "lon": 104.0543232
+  },
+  "tags": {
+    "name": "文翁石室",
+    "name:en": "Wenweng Shishi",
+    "public_transport": "stop_area",
+    "type": "public_transport"
+  }
+}
+
+  ]
+}

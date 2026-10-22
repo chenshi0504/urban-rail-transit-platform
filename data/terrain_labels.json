@@ -1,0 +1,324 @@
+[
+  {
+    "name": "西岭雪山",
+    "kind": "mountain",
+    "lat": 30.78127,
+    "lon": 102.99065,
+    "minZoom": 9.0
+  },
+  {
+    "name": "青城山",
+    "kind": "mountain",
+    "lat": 30.9105,
+    "lon": 103.55778,
+    "minZoom": 9.25
+  },
+  {
+    "name": "赵公山",
+    "kind": "mountain",
+    "lat": 30.97662,
+    "lon": 103.51659,
+    "minZoom": 9.5
+  },
+  {
+    "name": "鸡冠山",
+    "kind": "mountain",
+    "lat": 30.78425,
+    "lon": 103.15827,
+    "minZoom": 9.25
+  },
+  {
+    "name": "蓥华山",
+    "kind": "mountain",
+    "lat": 30.95862,
+    "lon": 103.49058,
+    "minZoom": 9.75
+  },
+  {
+    "name": "丹景山",
+    "kind": "mountain",
+    "lat": 31.0958,
+    "lon": 103.82388,
+    "minZoom": 10.0
+  },
+  {
+    "name": "磨盘山",
+    "kind": "mountain",
+    "lat": 30.7452,
+    "lon": 104.1222,
+    "minZoom": 11.5
+  },
+  {
+    "name": "龙门山脉",
+    "kind": "range",
+    "lat": 31.15,
+    "lon": 103.75,
+    "minZoom": 9.0
+  },
+  {
+    "name": "邛崃山脉",
+    "kind": "range",
+    "lat": 30.7,
+    "lon": 103.1,
+    "minZoom": 9.0
+  },
+  {
+    "name": "龙泉山脉",
+    "kind": "range",
+    "lat": 30.55,
+    "lon": 104.3,
+    "minZoom": 9.25
+  },
+  {
+    "name": "成都平原",
+    "kind": "plain",
+    "lat": 30.62,
+    "lon": 103.92,
+    "minZoom": 9.0
+  },
+  {
+    "name": "岷江",
+    "kind": "river",
+    "lat": 30.45,
+    "lon": 103.8,
+    "minZoom": 9.25
+  },
+  {
+    "name": "沱江",
+    "kind": "river",
+    "lat": 30.72687,
+    "lon": 104.49873,
+    "minZoom": 9.25
+  },
+  {
+    "name": "金马河",
+    "kind": "river",
+    "lat": 30.70884,
+    "lon": 103.72052,
+    "minZoom": 10.25
+  },
+  {
+    "name": "走马河",
+    "kind": "river",
+    "lat": 30.97028,
+    "lon": 103.65053,
+    "minZoom": 10.25
+  },
+  {
+    "name": "蒲阳河",
+    "kind": "river",
+    "lat": 30.99488,
+    "lon": 103.76808,
+    "minZoom": 10.25
+  },
+  {
+    "name": "柏条河",
+    "kind": "river",
+    "lat": 30.88186,
+    "lon": 103.89001,
+    "minZoom": 10.5
+  },
+  {
+    "name": "清水河",
+    "kind": "river",
+    "lat": 30.71296,
+    "lon": 103.95948,
+    "minZoom": 12.0
+  },
+  {
+    "name": "江安河",
+    "kind": "river",
+    "lat": 30.69197,
+    "lon": 103.87124,
+    "minZoom": 12.0
+  },
+  {
+    "name": "府河",
+    "kind": "river",
+    "lat": 30.70473,
+    "lon": 104.05214,
+    "minZoom": 12.25
+  },
+  {
+    "name": "南河",
+    "kind": "river",
+    "lat": 30.64,
+    "lon": 104.05,
+    "minZoom": 12.5
+  },
+  {
+    "name": "锦江",
+    "kind": "river",
+    "lat": 30.6,
+    "lon": 104.08,
+    "minZoom": 12.25
+  },
+  {
+    "name": "沙河",
+    "kind": "river",
+    "lat": 30.69,
+    "lon": 104.09,
+    "minZoom": 12.5
+  },
+  {
+    "name": "毗河",
+    "kind": "river",
+    "lat": 30.8105,
+    "lon": 104.21443,
+    "minZoom": 12.0
+  },
+  {
+    "name": "东风渠",
+    "kind": "river",
+    "lat": 30.67704,
+    "lon": 104.14705,
+    "minZoom": 12.5
+  },
+  {
+    "name": "徐堰河",
+    "kind": "river",
+    "lat": 30.8927,
+    "lon": 103.82897,
+    "minZoom": 12.0
+  },
+  {
+    "name": "三岔湖",
+    "kind": "lake",
+    "lat": 30.27469,
+    "lon": 104.26006,
+    "minZoom": 9.25
+  },
+  {
+    "name": "龙泉湖",
+    "kind": "lake",
+    "lat": 30.51132,
+    "lon": 104.39128,
+    "minZoom": 9.5
+  },
+  {
+    "name": "紫坪铺水库",
+    "kind": "lake",
+    "lat": 31.00758,
+    "lon": 103.51574,
+    "minZoom": 9.25
+  },
+  {
+    "name": "张家岩水库",
+    "kind": "lake",
+    "lat": 30.43132,
+    "lon": 104.3005,
+    "minZoom": 9.75
+  },
+  {
+    "name": "石象湖",
+    "kind": "lake",
+    "lat": 30.19726,
+    "lon": 103.42435,
+    "minZoom": 9.5
+  },
+  {
+    "name": "朝阳湖",
+    "kind": "lake",
+    "lat": 30.14249,
+    "lon": 103.42105,
+    "minZoom": 11.5
+  },
+  {
+    "name": "长滩湖",
+    "kind": "lake",
+    "lat": 30.14995,
+    "lon": 103.39043,
+    "minZoom": 11.5
+  },
+  {
+    "name": "老鹰水库",
+    "kind": "lake",
+    "lat": 30.18479,
+    "lon": 104.4974,
+    "minZoom": 10.0
+  },
+  {
+    "name": "兴隆湖",
+    "kind": "lake",
+    "lat": 30.39903,
+    "lon": 104.08625,
+    "minZoom": 11.25
+  },
+  {
+    "name": "麓湖",
+    "kind": "lake",
+    "lat": 30.45827,
+    "lon": 104.05954,
+    "minZoom": 11.25
+  },
+  {
+    "name": "东安湖",
+    "kind": "lake",
+    "lat": 30.59221,
+    "lon": 104.24017,
+    "minZoom": 11.25
+  },
+  {
+    "name": "青龙湖",
+    "kind": "lake",
+    "lat": 30.64095,
+    "lon": 104.1871,
+    "minZoom": 11.5
+  },
+  {
+    "name": "锦城湖",
+    "kind": "lake",
+    "lat": 30.57405,
+    "lon": 104.03867,
+    "minZoom": 11.75
+  },
+  {
+    "name": "北湖",
+    "kind": "lake",
+    "lat": 30.72096,
+    "lon": 104.1518,
+    "minZoom": 12.0
+  },
+  {
+    "name": "白鹭湾",
+    "kind": "lake",
+    "lat": 30.56936,
+    "lon": 104.14351,
+    "minZoom": 11.75
+  },
+  {
+    "name": "怡心湖",
+    "kind": "lake",
+    "lat": 30.47838,
+    "lon": 104.0194,
+    "minZoom": 11.75
+  },
+  {
+    "name": "永安湖",
+    "kind": "lake",
+    "lat": 30.42223,
+    "lon": 103.97532,
+    "minZoom": 11.75
+  },
+  {
+    "name": "升仙湖",
+    "kind": "lake",
+    "lat": 30.71021,
+    "lon": 104.07973,
+    "minZoom": 12.25
+  },
+  {
+    "name": "大观湖",
+    "kind": "lake",
+    "lat": 30.61777,
+    "lon": 104.12743,
+    "minZoom": 12.0
+  },
+  {
+    "name": "红旗水库",
+    "kind": "lake",
+    "lat": 30.2555,
+    "lon": 103.97731,
+    "minZoom": 11.5
+  }
+]

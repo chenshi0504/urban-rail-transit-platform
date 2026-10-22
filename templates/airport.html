@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>成都天府国际机场 · 3D 数字孪生</title>
+  <meta name="description" content="成都天府国际机场 3D 数字孪生，基于 OpenStreetMap 真实跑道、滑行道与航站楼轮廓构建，支持多视角观察与航迹演示。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1220'/%3E%3Cpath d='M8 23V10l8 7 8-7v13' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/airport.css">
+</head>
+<body>
+  <script>
+    // 首屏即按本地时间套用明暗：08:00–18:00 浅色，其余深色
+    (function () {
+      var h = new Date().getHours();
+      document.body.dataset.theme = (h >= 8 && h < 18) ? 'light' : 'dark';
+    })();
+  </script>
+  <canvas id="scene"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M10 29V13l10 9 10-9v16" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="10" cy="12" r="2.4" fill="#fff"/>
+        <circle cx="30" cy="12" r="2.4" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="brand-copy">
+      <h1>公共交通设施平台</h1>
+      <p>PUBLIC TRANSIT ATLAS</p>
+    </div>
+    <nav class="mode-switch" aria-label="平台模块">
+      <a class="mode-tab" href="/" title="轨道交通线网地图">地铁</a>
+      <a class="mode-tab is-active" href="/airport" aria-current="page" title="机场数字孪生">机场</a>
+    </nav>
+    <div class="city-switch" id="city-switch">
+      <button class="city-trigger" id="city-trigger" type="button"
+              aria-haspopup="listbox" aria-expanded="false" aria-controls="city-menu"
+              aria-label="切换城市与机场">
+        <span class="city-name">成都 · 天府</span>
+        <svg class="city-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="city-menu" id="city-menu" role="listbox" aria-label="选择城市与机场">
+        <div class="city-group">已开放</div>
+        <button class="city-option" type="button" role="option" data-airport="tfu" aria-selected="true">
+          <span class="city-mark" style="--c:#34c759" aria-hidden="true"></span>
+          <span class="city-option-name">成都 · 天府机场</span>
+          <span class="city-code">TFU</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="city-option" type="button" role="option" data-airport="dlc" aria-selected="false">
+          <span class="city-mark" style="--c:#af52de" aria-hidden="true"></span>
+          <span class="city-option-name">大连 · 周水子机场</span>
+          <span class="city-code">DLC</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="city-group">接入中</div>
+        <button class="city-option" type="button" role="option" data-soon="1" disabled>
+          <span class="city-mark" style="--c:#0a84ff" aria-hidden="true"></span>
+          <span class="city-option-name">重庆 · 江北机场</span>
+          <span class="city-code">CKG</span>
+        </button>
+        <button class="city-option" type="button" role="option" data-soon="1" disabled>
+          <span class="city-mark" style="--c:#ff9500" aria-hidden="true"></span>
+          <span class="city-option-name">昆明 · 长水机场</span>
+          <span class="city-code">KMG</span>
+        </button>
+        <button class="city-option" type="button" role="option" data-soon="1" disabled>
+          <span class="city-mark" style="--c:#ff3b30" aria-hidden="true"></span>
+          <span class="city-option-name">贵阳 · 龙洞堡机场</span>
+          <span class="city-code">KWE</span>
+        </button>
+      </div>
+    </div>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="切换深色模式" title="切换深色模式">
+      <svg class="i-sun" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="3.1" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M8 1.6v1.6M8 12.8v1.6M1.6 8h1.6M12.8 8h1.6M3.5 3.5l1.1 1.1M11.4 11.4l1.1 1.1M12.5 3.5l-1.1 1.1M4.6 11.4l-1.1 1.1"
+              stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <svg class="i-moon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M13.2 9.7A5.6 5.6 0 0 1 6.3 2.8a5.6 5.6 0 1 0 6.9 6.9z"
+              stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <aside class="hud" id="hud">
+    <div class="hud-head">
+      <span class="live-dot"></span>
+      <span>数字孪生 · DIGITAL TWIN</span>
+      <span class="hud-tag" id="fps-tag">3D</span>
+    </div>
+    <h2 id="airport-name">成都天府国际机场</h2>
+    <div class="hud-sub" id="airport-sub">TFU / ZUTF · 成都 · 2021 年通航</div>
+
+    <div class="metrics">
+      <div><b id="m-runways">3</b><span>跑道</span></div>
+      <div><b id="m-terminals">2</b><span>航站楼</span></div>
+      <div><b id="m-gates">88</b><span>登机口</span></div>
+      <div><b id="m-stands">94</b><span>机位</span></div>
+    </div>
+
+    <div class="runway-spec" id="runway-spec"></div>
+
+    <div class="section-label">图层 <em>LAYERS</em></div>
+    <div class="layers">
+      <label class="switch-row"><span>航站楼与配套</span><input type="checkbox" data-layer="terminals" checked><i></i></label>
+      <label class="switch-row"><span>航站楼内部结构</span><input type="checkbox" data-layer="interior"><i></i></label>
+      <label class="switch-row"><span>跑道与滑行道</span><input type="checkbox" data-layer="airfield" checked><i></i></label>
+      <label class="switch-row"><span>停机坪与机位</span><input type="checkbox" data-layer="aprons" checked><i></i></label>
+      <label class="switch-row"><span>周边道路系统</span><input type="checkbox" data-layer="roads" checked><i></i></label>
+      <label class="switch-row"><span>周边公共交通</span><input type="checkbox" data-layer="transit" checked><i></i></label>
+      <label class="switch-row"><span>进离场航迹</span><input type="checkbox" data-layer="tracks" checked><i></i></label>
+      <label class="switch-row"><span>航班动画</span><input type="checkbox" data-layer="aircraft" checked><i></i></label>
+      <label class="switch-row"><span>地面服务车辆</span><input type="checkbox" data-layer="vehicles" checked><i></i></label>
+      <label class="switch-row"><span>建筑标注</span><input type="checkbox" data-layer="labels" checked><i></i></label>
+    </div>
+
+    <div class="hud-foot">
+      <span>外观：OSM 真实轮廓 · 内部为示意</span>
+      <span class="foot-tag">OSM</span>
+    </div>
+  </aside>
+
+  <div class="viewbar">
+    <div class="seg" role="group" aria-label="切换观察视角">
+      <button type="button" data-view="overview" class="active">全景</button>
+      <button type="button" data-view="top">俯视</button>
+      <button type="button" data-view="t1">T1</button>
+      <button type="button" data-view="t2">T2</button>
+      <button type="button" data-view="runway">跑道</button>
+      <button type="button" data-view="metro">地铁</button>
+      <button type="button" data-view="tower">塔台</button>
+    </div>
+    <button class="orbit-btn" id="orbit-btn" type="button">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5V5h-2.5" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      自动环绕
+    </button>
+  </div>
+
+  <button class="compass-btn" id="compass-btn" type="button" title="回到正北俯视" aria-label="回到正北俯视">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="14.6" fill="none" stroke="currentColor" stroke-opacity="0.16" stroke-width="1"/>
+      <g class="compass-needle">
+        <path d="M16 5.2l3.5 10.9-3.5-2.1-3.5 2.1z" fill="#ff3b30"/>
+        <path d="M16 26.8l-3.5-10.9 3.5 2.1 3.5-2.1z" fill="#8e8e93"/>
+        <text x="16" y="4.2" text-anchor="middle" font-size="4.6" font-weight="600"
+              fill="#ff3b30" font-family="system-ui, sans-serif">N</text>
+      </g>
+    </svg>
+  </button>
+
+  <div class="hint" id="hint">左键拖动 · Ctrl+俯仰 · 滚轮缩放 · 方向键/WASD 平移 · 罗盘回正北</div>
+  <div class="loading" id="loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <span>正在构建机场数字孪生…</span>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="/static/vendor/three/three.min.js"></script>
+  <script src="/static/airport.js"></script>
+</body>
+</html>

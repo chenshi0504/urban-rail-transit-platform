@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>公共交通设施平台</title>
+  <meta name="description" content="基于 OpenStreetMap 的公共交通设施平台，支持成都、大连、重庆、昆明、贵阳五城轨道交通线网切换，并提供成都天府、大连周水子机场 3D 数字孪生。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1220'/%3E%3Cpath d='M8 23V10l8 7 8-7v13' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/vendor/leaflet.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-theme="light">
+  <script>
+    // 首屏即按本地时间套用明暗，避免闪白：08:00–18:00 浅色，其余深色
+    (function () {
+      var h = new Date().getHours();
+      document.body.dataset.theme = (h >= 8 && h < 18) ? 'light' : 'dark';
+    })();
+  </script>
+  <div id="map" role="application" aria-label="轨道交通线网地图"></div>
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+
+  <header class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M10 29V13l10 9 10-9v16" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="10" cy="12" r="2.4" fill="#fff"/>
+        <circle cx="30" cy="12" r="2.4" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="brand-copy">
+      <h1>公共交通设施平台</h1>
+      <p>PUBLIC TRANSIT ATLAS</p>
+    </div>
+    <nav class="mode-switch" aria-label="平台模块">
+      <a class="mode-tab is-active" href="/" aria-current="page" title="轨道交通线网地图">地铁</a>
+      <a class="mode-tab" href="/airport" title="机场数字孪生">机场</a>
+    </nav>
+    <div class="city-switch" id="city-switch">
+      <button class="city-trigger" id="city-trigger" type="button"
+              aria-haspopup="listbox" aria-expanded="false" aria-controls="city-menu"
+              aria-label="切换城市">
+        <span class="city-name" id="city-name">成都</span>
+        <svg class="city-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="city-menu" id="city-menu" role="listbox" aria-label="选择城市">
+        <button class="city-option" type="button" role="option" data-city="chengdu" aria-selected="true">
+          <span class="city-mark city-mark-chengdu" aria-hidden="true"></span>
+          <span class="city-option-name">成都</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="city-option" type="button" role="option" data-city="dalian" aria-selected="false">
+          <span class="city-mark city-mark-dalian" aria-hidden="true"></span>
+          <span class="city-option-name">大连</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="city-option" type="button" role="option" data-city="chongqing" aria-selected="false">
+          <span class="city-mark city-mark-chongqing" aria-hidden="true"></span>
+          <span class="city-option-name">重庆</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="city-option" type="button" role="option" data-city="kunming" aria-selected="false">
+          <span class="city-mark city-mark-kunming" aria-hidden="true"></span>
+          <span class="city-option-name">昆明</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="city-option" type="button" role="option" data-city="guiyang" aria-selected="false">
+          <span class="city-mark city-mark-guiyang" aria-hidden="true"></span>
+          <span class="city-option-name">贵阳</span>
+          <svg class="city-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.4 8.4 6.4 11.4 12.6 4.9" stroke="currentColor" stroke-width="2.1"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search" id="search">
+    <div class="search-field">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="8.6" cy="8.6" r="5.4" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M12.6 12.6L16.5 16.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input id="search-input" type="text" autocomplete="off" spellcheck="false"
+             placeholder="搜索线路或车站" aria-label="搜索线路或车站">
+      <kbd>/</kbd>
+      <button class="search-clear" id="search-clear" aria-label="清除搜索" hidden>
+        <svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="search-panel" id="search-panel" hidden></div>
+  </div>
+
+  <aside class="panel network-panel" id="network-panel" aria-label="线网总览">
+    <div class="panel-grip" aria-hidden="true"></div>
+    <button class="panel-close" id="panel-close" type="button" aria-label="关闭线网列表">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <button class="panel-collapse" id="panel-collapse" type="button" aria-label="收起线网总览">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M9 3L5 7l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="eyebrow">
+      <span class="pulse-dot"></span>
+      <span>线网总览</span>
+      <span class="eyebrow-en">NETWORK</span>
+    </div>
+
+    <div class="headline">
+      <span class="headline-num" id="stat-km">—</span>
+      <span class="headline-unit">km</span>
+      <span class="headline-label">运营里程</span>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><strong id="stat-stations">—</strong><span>去重车站</span></div>
+      <div class="metric"><strong id="stat-transfers">—</strong><span>换乘</span></div>
+      <div class="metric"><strong id="stat-lines">—</strong><span>线路</span></div>
+    </div>
+
+    <div class="list-head">
+      <span>线路图例 <em>LINES</em> <b id="line-count">—</b></span>
+      <div class="list-actions">
+        <button class="text-btn" id="toggle-all" type="button">全部隐藏</button>
+      </div>
+    </div>
+
+    <div class="line-list" id="line-list"></div>
+    <div class="list-fade" id="list-fade" aria-hidden="true"></div>
+
+    <div class="panel-foot">
+      <div class="foot-row">
+        <span id="snapshot-date">数据快照 2026-10-19</span>
+        <span class="foot-tag">OSM</span>
+      </div>
+      <p id="panel-foot-note">站点与里程核对轨道运营方公开资料，仅供查看。</p>
+    </div>
+  </aside>
+
+  <button class="panel-toggle" id="panel-toggle" type="button" aria-label="打开线网列表">
+    <span></span> 线网
+  </button>
+
+  <aside class="panel detail-panel" id="detail-panel" aria-hidden="true" aria-label="详情"></aside>
+
+  <button class="side-tab side-tab-left" id="network-tab" type="button" aria-label="展开线网总览" hidden>线网总览</button>
+  <button class="side-tab side-tab-right" id="detail-tab" type="button" aria-label="展开详情" hidden>
+    <span id="detail-tab-label">详情</span>
+  </button>
+
+  <div class="basemap-switch" id="basemap-switch" role="group" aria-label="底图切换">
+    <button type="button" data-basemap="light" class="active">浅色</button>
+    <button type="button" data-basemap="terrain">地形</button>
+    <button type="button" data-basemap="standard">OSM</button>
+    <button type="button" data-basemap="dark">暗色</button>
+  </div>
+
+  <div class="hint" id="hint">
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M4 6.5h12M4 10h12M4 13.5h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </svg>
+    <span>滚轮缩放 · 拖拽平移 · 点击线路查看详情</span>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="/static/vendor/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

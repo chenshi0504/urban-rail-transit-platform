@@ -1,0 +1,10 @@
+[
+  { "name": "黔灵山", "kind": "mountain", "lat": 26.598, "lon": 106.683, "minZoom": 11.0 },
+  { "name": "东山", "kind": "mountain", "lat": 26.588, "lon": 106.724, "minZoom": 11.5 },
+  { "name": "云雾山", "kind": "mountain", "lat": 26.75, "lon": 106.56, "minZoom": 9.75 },
+  { "name": "黔灵湖", "kind": "lake", "lat": 26.607, "lon": 106.678, "minZoom": 11.5 },
+  { "name": "观山湖", "kind": "lake", "lat": 26.622, "lon": 106.622, "minZoom": 11.5 },
+  { "name": "阿哈湖", "kind": "lake", "lat": 26.535, "lon": 106.65, "minZoom": 10.5 },
+  { "name": "南明河", "kind": "river", "lat": 26.57, "lon": 106.715, "minZoom": 10.5 },
+  { "name": "花溪湿地", "kind": "plain", "lat": 26.43, "lon": 106.66, "minZoom": 11.0 }
+]

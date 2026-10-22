@@ -1,0 +1,10 @@
+[
+  { "name": "西山", "kind": "mountain", "lat": 24.955, "lon": 102.63, "minZoom": 10.5 },
+  { "name": "长虫山", "kind": "mountain", "lat": 25.125, "lon": 102.75, "minZoom": 10.75 },
+  { "name": "梁王山", "kind": "mountain", "lat": 24.86, "lon": 102.96, "minZoom": 10.0 },
+  { "name": "金马山", "kind": "mountain", "lat": 25.05, "lon": 102.76, "minZoom": 11.5 },
+  { "name": "滇池", "kind": "lake", "lat": 24.82, "lon": 102.70, "minZoom": 9.5 },
+  { "name": "翠湖", "kind": "lake", "lat": 25.05, "lon": 102.703, "minZoom": 12.0 },
+  { "name": "盘龙江", "kind": "river", "lat": 25.02, "lon": 102.723, "minZoom": 10.5 },
+  { "name": "滇池盆地", "kind": "plain", "lat": 24.93, "lon": 102.78, "minZoom": 9.75 }
+]

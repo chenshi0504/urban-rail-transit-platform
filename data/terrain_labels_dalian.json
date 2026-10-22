@@ -1,0 +1,19 @@
+[
+  { "name": "大黑山", "kind": "mountain", "lat": 39.0987, "lon": 121.7936, "minZoom": 10.0 },
+  { "name": "老铁山", "kind": "mountain", "lat": 38.7275, "lon": 121.132, "minZoom": 10.0 },
+  { "name": "城山头", "kind": "mountain", "lat": 39.158, "lon": 122.074, "minZoom": 10.5 },
+  { "name": "白云山", "kind": "mountain", "lat": 38.901, "lon": 121.617, "minZoom": 11.5 },
+  { "name": "莲花山", "kind": "mountain", "lat": 38.872, "lon": 121.626, "minZoom": 11.5 },
+  { "name": "绿山", "kind": "mountain", "lat": 38.897, "lon": 121.608, "minZoom": 12.0 },
+  { "name": "辽东丘陵", "kind": "range", "lat": 39.36, "lon": 122.02, "minZoom": 9.75 },
+  { "name": "金州平原", "kind": "plain", "lat": 39.05, "lon": 121.78, "minZoom": 10.25 },
+  { "name": "金州湾", "kind": "lake", "lat": 39.12, "lon": 121.62, "minZoom": 10.0 },
+  { "name": "大连湾", "kind": "lake", "lat": 38.94, "lon": 121.72, "minZoom": 10.5 },
+  { "name": "星海湾", "kind": "lake", "lat": 38.872, "lon": 121.585, "minZoom": 11.0 },
+  { "name": "旅顺口", "kind": "lake", "lat": 38.805, "lon": 121.255, "minZoom": 10.5 },
+  { "name": "黄海", "kind": "lake", "lat": 38.83, "lon": 122.02, "minZoom": 9.5 },
+  { "name": "渤海", "kind": "lake", "lat": 38.98, "lon": 121.12, "minZoom": 9.5 },
+  { "name": "碧流河", "kind": "river", "lat": 39.42, "lon": 122.32, "minZoom": 10.0 },
+  { "name": "登沙河", "kind": "river", "lat": 39.2, "lon": 122.1, "minZoom": 11.0 },
+  { "name": "马栏河", "kind": "river", "lat": 38.887, "lon": 121.577, "minZoom": 12.0 }
+]

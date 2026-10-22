@@ -1,0 +1,13 @@
+[
+  { "name": "缙云山", "kind": "range", "lat": 29.835, "lon": 106.40, "minZoom": 10.0 },
+  { "name": "中梁山", "kind": "range", "lat": 29.55, "lon": 106.42, "minZoom": 10.25 },
+  { "name": "铜锣山", "kind": "range", "lat": 29.60, "lon": 106.63, "minZoom": 10.25 },
+  { "name": "明月山", "kind": "range", "lat": 29.76, "lon": 106.86, "minZoom": 10.0 },
+  { "name": "歌乐山", "kind": "mountain", "lat": 29.575, "lon": 106.43, "minZoom": 11.0 },
+  { "name": "南山", "kind": "mountain", "lat": 29.52, "lon": 106.61, "minZoom": 11.25 },
+  { "name": "鹅岭", "kind": "mountain", "lat": 29.553, "lon": 106.532, "minZoom": 12.0 },
+  { "name": "长江", "kind": "river", "lat": 29.565, "lon": 106.59, "minZoom": 9.75 },
+  { "name": "嘉陵江", "kind": "river", "lat": 29.573, "lon": 106.53, "minZoom": 9.75 },
+  { "name": "渝中半岛", "kind": "plain", "lat": 29.558, "lon": 106.57, "minZoom": 11.5 },
+  { "name": "金佛山", "kind": "mountain", "lat": 29.20, "lon": 107.20, "minZoom": 9.5 }
+]
