@@ -8,43 +8,40 @@
   const $ = (sel, root = document) => root.querySelector(sel);
 
   const OSM_FALLBACK = {
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    subdomains: 'abc',
+    url: '/tiles/standard/{z}/{x}/{y}.png',
     maxZoom: 19,
     attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   };
 
-  // 底图全部使用免密钥源；主源不可达时自动退回 OSM，并用滤镜模拟深色/地形
+  // 瓦片统一走本地服务端代理（/tiles/…），避免浏览器受系统代理影响取不到图
   const BASEMAPS = {
     light: {
-      url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-      subdomains: 'abcd',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      maxZoom: 20,
+      url: '/tiles/light/{z}/{x}/{y}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, tiles &copy; <a href="https://osm.jp">OSM Japan</a>',
+      maxZoom: 19,
       fallback: OSM_FALLBACK,
-      filter: 'saturate(0.9) brightness(1.04)',
-      fallbackFilter: '',
+      filter: 'saturate(0.94) brightness(1.03)',
+      fallbackFilter: 'saturate(0.95)',
     },
     terrain: {
-      url: 'https://tile.opentopomap.org/{z}/{x}/{y}.png',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)',
-      maxZoom: 17,
+      url: '/tiles/terrain/{z}/{x}/{y}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, tiles &copy; <a href="https://www.cyclosm.org">CyclOSM</a>',
+      maxZoom: 19,
       fallback: OSM_FALLBACK,
-      filter: '',
-      fallbackFilter: 'sepia(0.45) saturate(1.3) contrast(0.92) brightness(1.02)',
+      filter: 'saturate(0.92) contrast(0.98)',
+      fallbackFilter: 'sepia(0.42) saturate(1.25) contrast(0.92) brightness(1.02)',
     },
     standard: {
-      url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      url: '/tiles/standard/{z}/{x}/{y}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, tiles &copy; <a href="https://osm.jp">OSM Japan</a>',
       maxZoom: 19,
     },
     dark: {
-      url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-      subdomains: 'abcd',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      maxZoom: 20,
+      url: '/tiles/dark/{z}/{x}/{y}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, tiles &copy; <a href="https://openstreetmap.fr">OSM France</a>',
+      maxZoom: 19,
       fallback: OSM_FALLBACK,
-      filter: '',
+      filter: 'invert(1) hue-rotate(180deg) brightness(0.88) contrast(1.06) saturate(0.65)',
       fallbackFilter: 'invert(1) hue-rotate(180deg) brightness(0.86) contrast(1.08) saturate(0.7)',
     },
   };
@@ -73,6 +70,7 @@
     basemapFallback: false,
     basemapTimer: 0,
     tilesLoaded: 0,
+    tileErrors: 0,
     lineGroup: null,
     badgeGroup: null,
     lineLayers: new Map(),
@@ -442,8 +440,9 @@
 
   async function boot() {
     const city = initialCity();
-    // 进入页面即按当前时间决定明暗
-    state.basemap = themeByClock();
+    // 进入页面即按当前时间决定明暗（?theme=light|dark 可强制指定，便于分享/排查）
+    const forced = (new URLSearchParams(location.search).get('theme') || '').toLowerCase();
+    state.basemap = forced === 'light' || forced === 'dark' ? forced : themeByClock();
     document.body.dataset.theme = state.basemap;
     try {
       applyNetwork(city, await fetchCity(city));
@@ -455,6 +454,9 @@
 
     initMap();
     renderCity();
+    // ?basemap=light|terrain|standard|dark 可直接指定底图
+    const wanted = (new URLSearchParams(location.search).get('basemap') || '').toLowerCase();
+    if (wanted && BASEMAPS[wanted]) applyBasemap(wanted);
     bindUI();
     applyHash();
 
@@ -548,26 +550,6 @@
       closeMobilePanel();
       if (state.selectedLine || state.selectedStation) closeDetail();
     });
-    let tileErrors = 0;
-    map.on('tileload', (e) => {
-      const src = e.tile && e.tile.getAttribute ? e.tile.getAttribute('src') : '';
-      if (src && src.indexOf('data:image') === 0) return;
-      state.tilesLoaded = (state.tilesLoaded || 0) + 1;
-    });
-    map.on('tileerror', () => {
-      tileErrors += 1;
-      const cfg = BASEMAPS[state.basemap] || {};
-      // 主源连续失败时先退回 OSM 备用源（保留深色/地形滤镜），再失败只提示
-      if (tileErrors >= 4 && cfg.fallback && !state.basemapFallback) {
-        applyBasemap(state.basemap, { fallback: true });
-        showToast('当前底图源不可用，已自动切换到备用底图。');
-        return;
-      }
-      if (!state.tileErrorShown && tileErrors > 10) {
-        state.tileErrorShown = true;
-        showToast('底图瓦片加载较慢，线网数据不受影响。');
-      }
-    });
     updateZoomClass();
 
     window.addEventListener('resize', () => map.invalidateSize({ debounceMoveend: true }));
@@ -593,13 +575,31 @@
     document.body.dataset.basemap = key;
 
     state.tilesLoaded = 0;
-    state.tileLayer = L.tileLayer(src.url, {
+    state.tileErrors = 0;
+    const layer = L.tileLayer(src.url, {
       subdomains: src.subdomains || 'abc',
       maxZoom: src.maxZoom,
       attribution: src.attr || cfg.attr,
       errorTileUrl: BLANK_TILE,
       className: 'basemap-tiles',
     }).addTo(state.map);
+    state.tileLayer = layer;
+
+    // Leaflet 的瓦片事件只在图层上触发，不会冒泡到 map，必须绑在图层实例上
+    layer.on('tileload', (e) => {
+      const s = e.tile && e.tile.getAttribute ? e.tile.getAttribute('src') : '';
+      if (s && s.indexOf('data:image') === 0) return;
+      state.tilesLoaded += 1;
+    });
+    layer.on('tileerror', () => {
+      if (state.tileLayer !== layer) return;
+      state.tileErrors += 1;
+      if (state.tileErrors >= 4 && cfg.fallback && !useFallback) {
+        clearTimeout(state.basemapTimer);
+        applyBasemap(key, { fallback: true });
+        showToast('当前底图源不可用，已自动切换到备用底图。');
+      }
+    });
 
     // 备用源 + CSS 滤镜模拟深色/地形
     const pane = state.map.getPane('tilePane');
@@ -612,7 +612,7 @@
         if (state.basemap !== key || state.basemapFallback || state.tilesLoaded) return;
         applyBasemap(key, { fallback: true });
         showToast('底图源无响应，已切换到备用底图。');
-      }, 5000);
+      }, 12000);
     }
 
     el.basemap.querySelectorAll('button').forEach((b) => {

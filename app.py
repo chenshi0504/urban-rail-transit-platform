@@ -4,10 +4,12 @@
 开放城市：成都、大连、重庆、昆明、贵阳。Flask + SQLite，首次启动时从各城市
 network JSON 建库。
 """
+import base64
 import json
 import os
 import sqlite3
-from flask import Flask, jsonify, render_template, request
+import urllib.request
+from flask import Flask, Response, jsonify, render_template, request, send_file
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 PORT = int(os.environ.get("PORT", "8007"))
@@ -54,6 +56,76 @@ DEFAULT_CITY = "chengdu"
 app = Flask(__name__, static_folder="static", template_folder="templates")
 if hasattr(app, "json"):
     app.json.ensure_ascii = False
+
+# ---------------------------------------------------------------- 底图瓦片代理
+# 本机浏览器受系统代理影响时常常取不到境外瓦片；这里由服务端直接取图并落盘缓存，
+# 浏览器只访问 127.0.0.1，稳定且可离线复用。
+TILE_DIR = os.path.join(BASE, "static", "tilecache")
+# 每个样式给一组候选源，按顺序尝试；{s} 会替换为 a/b/c 子域
+TILE_SOURCES = {
+    "light": [
+        "https://tile.openstreetmap.jp/{z}/{x}/{y}.png",
+        "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+    ],
+    "terrain": [
+        "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+        "https://tile.openstreetmap.jp/{z}/{x}/{y}.png",
+    ],
+    "standard": [
+        "https://tile.openstreetmap.jp/{z}/{x}/{y}.png",
+        "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+    ],
+    "dark": [
+        "https://tile.openstreetmap.jp/{z}/{x}/{y}.png",
+        "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+    ],
+}
+TILE_SUBDOMAINS = "abc"
+TILE_UA = "TransitFacilityAtlas/1.0 (local research tool)"
+# 关键：Windows 下 urllib 会读系统代理，而本机系统代理对境外瓦片不可用，这里强制直连
+TILE_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+BLANK_PNG = base64.b64decode(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
+)
+
+
+@app.route("/tiles/<style>/<int:z>/<int:x>/<int:y>.png")
+def basemap_tile(style, z, x, y):
+    sources = TILE_SOURCES.get(style)
+    if not sources or not (0 <= z <= 19) or x < 0 or y < 0:
+        return Response(BLANK_PNG, mimetype="image/png", status=404)
+
+    path = os.path.join(TILE_DIR, style, str(z), str(x), "%d.png" % y)
+    if os.path.exists(path):
+        return send_file(path, mimetype="image/png", max_age=86400)
+
+    data = None
+    for tpl in sources:
+        for sub in TILE_SUBDOMAINS:
+            url = (tpl.replace("{s}", sub)
+                   .replace("{z}", str(z)).replace("{x}", str(x)).replace("{y}", str(y)))
+            try:
+                req = urllib.request.Request(url, headers={
+                    "User-Agent": TILE_UA, "Accept": "image/png",
+                })
+                with TILE_OPENER.open(req, timeout=8) as resp:
+                    data = resp.read()
+                if data and len(data) > 100:
+                    break
+                data = None
+            except Exception:  # noqa: BLE001
+                data = None
+        if data:
+            break
+
+    if not data:
+        return Response(BLANK_PNG, mimetype="image/png", status=404)
+
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "wb") as fh:
+        fh.write(data)
+    return Response(data, mimetype="image/png",
+                    headers={"Cache-Control": "public, max-age=86400"})
 
 
 def city_key():

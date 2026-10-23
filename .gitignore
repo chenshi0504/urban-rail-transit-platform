@@ -11,6 +11,9 @@ server.err
 *.log
 *.tmp
 
+# 底图瓦片缓存（运行期自动生成）
+static/tilecache/
+
 # 编辑器 / 智能体工作区
 .codebuddy/
 .workbuddy/
