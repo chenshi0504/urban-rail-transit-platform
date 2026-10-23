@@ -7,16 +7,31 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
 
+  const OSM_FALLBACK = {
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    subdomains: 'abc',
+    maxZoom: 19,
+    attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  };
+
+  // 底图全部使用免密钥源；主源不可达时自动退回 OSM，并用滤镜模拟深色/地形
   const BASEMAPS = {
     light: {
-      url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-      maxZoom: 19,
+      url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+      subdomains: 'abcd',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      maxZoom: 20,
+      fallback: OSM_FALLBACK,
+      filter: 'saturate(0.9) brightness(1.04)',
+      fallbackFilter: '',
     },
     terrain: {
-      url: 'https://tiles.stadiamaps.com/tiles/stamen_terrain_background/{z}/{x}/{y}{r}.png',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, tiles &copy; <a href="https://stamen.com/">Stamen Design</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-      maxZoom: 18,
+      url: 'https://tile.opentopomap.org/{z}/{x}/{y}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)',
+      maxZoom: 17,
+      fallback: OSM_FALLBACK,
+      filter: '',
+      fallbackFilter: 'sepia(0.45) saturate(1.3) contrast(0.92) brightness(1.02)',
     },
     standard: {
       url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -24,11 +39,18 @@
       maxZoom: 19,
     },
     dark: {
-      url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
-      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-      maxZoom: 19,
+      url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+      subdomains: 'abcd',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      maxZoom: 20,
+      fallback: OSM_FALLBACK,
+      filter: '',
+      fallbackFilter: 'invert(1) hue-rotate(180deg) brightness(0.86) contrast(1.08) saturate(0.7)',
     },
   };
+
+  // 瓦片失败时用透明图占位，避免出现破图标
+  const BLANK_TILE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
   const STATION_MIN_ZOOM = 11;
   const LABEL_MIN_ZOOM = 13;
@@ -48,6 +70,9 @@
     map: null,
     tileLayer: null,
     basemap: 'light',
+    basemapFallback: false,
+    basemapTimer: 0,
+    tilesLoaded: 0,
     lineGroup: null,
     badgeGroup: null,
     lineLayers: new Map(),
@@ -524,13 +549,21 @@
       if (state.selectedLine || state.selectedStation) closeDetail();
     });
     let tileErrors = 0;
+    map.on('tileload', (e) => {
+      const src = e.tile && e.tile.getAttribute ? e.tile.getAttribute('src') : '';
+      if (src && src.indexOf('data:image') === 0) return;
+      state.tilesLoaded = (state.tilesLoaded || 0) + 1;
+    });
     map.on('tileerror', () => {
       tileErrors += 1;
-      if ((state.basemap === 'light' || state.basemap === 'terrain') && tileErrors > 6) {
-        state.tileErrorShown = true;
-        applyBasemap('standard');
-        showToast('当前底图不可用，已自动切换到 OSM 标准底图。');
-      } else if (!state.tileErrorShown && tileErrors > 4) {
+      const cfg = BASEMAPS[state.basemap] || {};
+      // 主源连续失败时先退回 OSM 备用源（保留深色/地形滤镜），再失败只提示
+      if (tileErrors >= 4 && cfg.fallback && !state.basemapFallback) {
+        applyBasemap(state.basemap, { fallback: true });
+        showToast('当前底图源不可用，已自动切换到备用底图。');
+        return;
+      }
+      if (!state.tileErrorShown && tileErrors > 10) {
         state.tileErrorShown = true;
         showToast('底图瓦片加载较慢，线网数据不受影响。');
       }
@@ -548,19 +581,39 @@
     container.classList.toggle('z-high', z >= LABEL_MIN_ZOOM);
   }
 
-  function applyBasemap(key) {
+  function applyBasemap(key, opts = {}) {
     const cfg = BASEMAPS[key];
     if (!cfg || !state.map) return;
+    const useFallback = !!(opts.fallback && cfg.fallback);
+    const src = useFallback ? { ...cfg, ...cfg.fallback } : cfg;
     if (state.tileLayer) state.map.removeLayer(state.tileLayer);
     state.basemap = key;
+    state.basemapFallback = useFallback;
     document.body.dataset.theme = key === 'dark' ? 'dark' : 'light';
     document.body.dataset.basemap = key;
 
-    state.tileLayer = L.tileLayer(cfg.url, {
-      subdomains: cfg.subdomains || 'abc',
-      maxZoom: cfg.maxZoom,
-      attribution: cfg.attr,
+    state.tilesLoaded = 0;
+    state.tileLayer = L.tileLayer(src.url, {
+      subdomains: src.subdomains || 'abc',
+      maxZoom: src.maxZoom,
+      attribution: src.attr || cfg.attr,
+      errorTileUrl: BLANK_TILE,
+      className: 'basemap-tiles',
     }).addTo(state.map);
+
+    // 备用源 + CSS 滤镜模拟深色/地形
+    const pane = state.map.getPane('tilePane');
+    if (pane) pane.style.filter = useFallback ? (cfg.fallbackFilter || '') : (cfg.filter || '');
+
+    // 部分网络会静默丢包（既不成功也不报错），用看门狗兜底切到备用源
+    clearTimeout(state.basemapTimer);
+    if (!useFallback && cfg.fallback) {
+      state.basemapTimer = setTimeout(() => {
+        if (state.basemap !== key || state.basemapFallback || state.tilesLoaded) return;
+        applyBasemap(key, { fallback: true });
+        showToast('底图源无响应，已切换到备用底图。');
+      }, 5000);
+    }
 
     el.basemap.querySelectorAll('button').forEach((b) => {
       b.classList.toggle('active', b.dataset.basemap === key);
